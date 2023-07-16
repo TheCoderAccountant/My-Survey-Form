@@ -57,34 +57,42 @@
                 <option value="lst-row">Last Row</option>
             </select>
             <br>
-            <p>Please choose attendance count</p>
-            <input 
-                type="radio" 
-                name="people-count" 
-                id="single-attendance"  
-                value="1" 
-                checked>
-            <label id="single-attendance">Single</label> 
-            <input 
-                type="radio" 
-                name="people-count" 
-                id="couple-attendance" 
-                value="2">
-            <label id="couple-attendance">Couple</label> <br>
-            <br>
-            <p>Please select contact methods with you</p>
-            <input 
-                type="checkbox" 
-                id="call-phone" 
-                name="phone" 
-                value="phone">
-            <label for="call-phone"> Contact me by phone </label><br>
-            <input 
-                type="checkbox" 
-                id="send-email" 
-                name="sendemail" 
-                value="email">
-            <label for="send-email"> Send me an Email</label><br>
+            
+            <div class="selections">
+                <p>Please choose attendance count</p>
+                <label for="single-attendance">Single
+                    <input 
+                        type="radio" 
+                        name="people-count" 
+                        id="single-attendance"  
+                        value="1" 
+                        checked>
+                </label> 
+                <label for="couple-attendance">Couple
+                    <input 
+                        type="radio" 
+                        name="people-count" 
+                        id="couple-attendance" 
+                        value="2">
+                </label> <br>
+                <br>
+                <p>Please select contact methods with you</p>
+                <label for="call-phone">Contact me by phone
+                    <input 
+                        type="checkbox" 
+                        id="call-phone" 
+                        name="phone" 
+                        value="phone">
+                </label><br>
+                <label for="send-email">Send me an Email
+                    <input 
+                        type="checkbox" 
+                        id="send-email" 
+                        name="sendemail" 
+                        value="email">
+                </label><br>
+            </div>
+            
             <br>
             <label for="text-access">Special Request (optional)</label>
             <br>
@@ -93,6 +101,7 @@
                 id="text-access" 
                 rows="5" cols="30" 
                 placeholder="Please specify your accessibility request"></textarea>
+            
             <br>
             <button type="submit" id="submit" onclick="alert('Request successfully submitted!!')"
                 value="submit"> Reserve your seat in the event</button>
