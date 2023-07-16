@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header-pane">
+            <h1 id="title" class="header-form"><strong>Survey Form</strong></h1>
+            <p id="description" class="description-form">This survey is for event participation</p>
+        </header>
+        <form id="survey-form" action="">
+            <label id="name-label" for="name"> Please provide your Full Name: </label> <br>
+            <input 
+                type="text" 
+                name="name" 
+                id="name" 
+                placeholder="Ms John Smith"
+                required> <br>
+            <label id="email-label" for="email"> Please provide your email: </label> <br>
+            <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                placeholder="example@mail.com" 
+                required> <br>
+            <label id="number-label" for="number"> Enter your age: </label> <br>
+            <input 
+                type="number" 
+                name="age" 
+                id="number" 
+                placeholder="your age" 
+                min="18" max="100"> <br>
+            <label for="phone-label">Enter your phone number:</label> <br>
+            <input 
+                type="tel" 
+                id="phone-label" 
+                name="phone-number" 
+                pattern="([0-9]){3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" 
+                placeholder="994 50 987 6543" 
+                required>
+            <br>
+            <br>
+            <label id="dropdown-label" for="dropdown"> Please choose a seat row from the list </label> 
+            <br>
+            <select name="drop-list" id="dropdown" required> 
+                <option value="no-row" disabled>Select from list</option>
+                <option value="fst-row">First Row</option>
+                <option value="snd-row">Second Row</option>
+                <option value="trd-row">Third Row</option>
+                <option value="lst-row">Last Row</option>
+            </select>
+            <br>
+            <p>Please choose attendance count</p>
+            <input 
+                type="radio" 
+                name="people-count" 
+                id="single-attendance"  
+                value="1" 
+                checked>
+            <label id="single-attendance">Single</label> 
+            <input 
+                type="radio" 
+                name="people-count" 
+                id="couple-attendance" 
+                value="2">
+            <label id="couple-attendance">Couple</label> <br>
+            <br>
+            <p>Please select contact methods with you</p>
+            <input 
+                type="checkbox" 
+                id="call-phone" 
+                name="phone" 
+                value="phone">
+            <label for="call-phone"> Contact me by phone </label><br>
+            <input 
+                type="checkbox" 
+                id="send-email" 
+                name="sendemail" 
+                value="email">
+            <label for="send-email"> Send me an Email</label><br>
+            <br>
+            <label for="text-access">Special Request (optional)</label>
+            <br>
+            <textarea 
+                name="accessibility" 
+                id="text-access" 
+                rows="5" cols="30" 
+                placeholder="Please specify your accessibility request"></textarea>
+            <br>
+            <button type="submit" id="submit" onclick="alert('Request successfully submitted!!')"
+                value="submit"> Reserve your seat in the event</button>
+            <button type="reset" onclick="alert('Form reset!')" value="Reset">Reset entry</button>
+        </form>
+    </div>
+</body>
+
+</html>
